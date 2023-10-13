@@ -11,23 +11,24 @@ jobs:
       matrix:
         platform: [windows-latest]
         
-  runs-on: windows-2022
-  steps:
-    - uses: actions/checkout@v3
-    - name: setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-    - name: install
-      run:
-        npm install
-    - name: build
-      run:
-        npm run build-w && npm run build-wz
-    - name: upload
-      uses: actions/upload-artifact@v2
-      with:
-        # 上传后文件的名称
-        name: windows
-        # 打包的路径以及文件过滤，此为仅打包dist目录下的exe文件
-        path: out
+    runs-on: windows-2022
+  
+    steps:
+       - uses: actions/checkout@v3
+       - name: setup node
+         uses: actions/setup-node@v3
+         with:
+            node-version: 16
+       - name: install
+         run:
+           npm install
+       - name: build
+         run:
+           npm run build-w && npm run build-wz
+       - name: upload
+         uses: actions/upload-artifact@v2
+         with:
+           # 上传后文件的名称
+           name: windows
+           # 打包的路径以及文件过滤，此为仅打包dist目录下的exe文件
+           path: out
