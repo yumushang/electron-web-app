@@ -27,6 +27,8 @@ jobs:
            npm run build-w && npm run build-wz
        - name: upload
          uses: actions/upload-artifact@v2
+         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
            # 上传后文件的名称
            name: windows
