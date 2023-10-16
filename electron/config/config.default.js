@@ -143,7 +143,7 @@ module.exports = (appInfo) => {
     },
     tray: {
       enable: true,
-      title: 'EE程序',
+      title: '楚淮排队叫号',
       icon: '/public/images/tray.png'
     },
     security: {
