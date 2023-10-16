@@ -41,6 +41,13 @@ class TrayAddon {
         }
       },
       {
+        label: '重新加载',
+        click: function () {
+          const contents = mainWindow.webContents;
+          contents.reloadIgnoringCache();
+        }
+      },
+      {
         label: '退出',
         click: function () {
           CoreApp.appQuit();
