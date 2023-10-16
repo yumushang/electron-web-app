@@ -48,6 +48,13 @@ class TrayAddon {
         }
       },
       {
+        label: '开发者工具',
+        click: function () {
+          const contents = mainWindow.webContents;
+          contents.openDevTools();
+        }
+      },
+      {
         label: '退出',
         click: function () {
           CoreApp.appQuit();
