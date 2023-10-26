@@ -60,7 +60,7 @@ module.exports = (appInfo) => {
    */
   config.remoteUrl = {
     enable: true,
-    url: 'https://wsxf.hasygxf.cn/pdjh/#/login'
+    url: 'https://szxf.jx-xinfang.gov.cn/pdjh#/login'
   };
 
   /**
